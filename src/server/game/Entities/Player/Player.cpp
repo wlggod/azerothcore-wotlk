@@ -453,6 +453,7 @@ Player::~Player()
     delete m_runes;
     delete m_achievementMgr;
     delete m_reputationMgr;
+    delete _cinematicMgr;
 
     //npcbot
     delete _botMgr;
@@ -3887,7 +3888,7 @@ Mail* Player::GetMail(uint32 id)
     return nullptr;
 }
 
-void Player::BuildCreateUpdateBlockForPlayer(UpdateData* data, Player* target) const
+void Player::BuildCreateUpdateBlockForPlayer(UpdateData* data, Player* target)
 {
     if (target == this)
     {
